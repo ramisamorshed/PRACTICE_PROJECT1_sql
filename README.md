@@ -1,6 +1,6 @@
-!Open in GitHub Codespaces
-# PRACTICE_PROJECT1_sql
+[![Open in GitHub Codespaces](https://github.comsql
 SQL Server project: messy e-commerce dataset cleaned and analyzed using T-SQL.
+
 # SQL Data Cleaning & Analysis Project
 
 ## Overview
@@ -28,8 +28,3 @@ It covers:
 SELECT * FROM demo.v_kpi;
 SELECT * FROM demo.v_revenue_by_month_category;
 SELECT * FROM demo.v_top_states;
-
-## Tech Stack
-- Microsoft SQL Server
-- T-SQL (Transact-SQL)
-- SSMS / Azure Data Studio
