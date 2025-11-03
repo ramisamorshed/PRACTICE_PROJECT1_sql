@@ -1,4 +1,4 @@
-[![Open in GitHub Codespaces](https://refactored-memory-9wwrr9g65pv3796r.github.dev/)
+
 SQL Server project: messy e-commerce dataset cleaned and analyzed using T-SQL.
 
 # SQL Data Cleaning & Analysis Project
