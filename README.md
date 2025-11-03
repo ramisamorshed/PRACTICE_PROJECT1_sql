@@ -1,4 +1,4 @@
-
+Important: One whole code file, and a few more chunk files based on step-by-step problem-solving are listed in this repository. 
 SQL Server project: messy e-commerce dataset cleaned and analyzed using T-SQL.
 
 # SQL Data Cleaning & Analysis Project
