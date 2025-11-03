@@ -1,0 +1,40 @@
+/* ===========================================================
+   Retail demo project (SQL Server / T‑SQL)
+   Part 3: KPI & analysis views
+   =========================================================== */
+
+USE RetailDemo;
+GO
+
+-- KPI view
+IF OBJECT_ID('demo.v_kpi','V') IS NOT NULL DROP VIEW demo.v_kpi;
+GO
+CREATE VIEW demo.v_kpi AS
+SELECT
+    COUNT(*)                               AS orders,
+    SUM(units)                             AS total_units,
+    CAST(SUM(net_revenue) AS DECIMAL(12,2)) AS total_revenue,
+    CAST(AVG(net_revenue) AS DECIMAL(12,2)) AS avg_order_value
+FROM demo.orders_clean;
+GO
+
+-- Revenue by month & category
+IF OBJECT_ID('demo.v_revenue_by_month_category','V') IS NOT NULL DROP VIEW demo.v_revenue_by_month_category;
+GO
+CREATE VIEW demo.v_revenue_by_month_category AS
+SELECT
+    CONVERT(date, DATEFROMPARTS(YEAR(order_date), MONTH(order_date), 1)) AS month_start,
+    product_category,
+    CAST(SUM(net_revenue) AS DECIMAL(12,2)) AS revenue
+FROM demo.orders_clean
+GROUP BY CONVERT(date, DATEFROMPARTS(YEAR(order_date), MONTH(order_date), 1)), product_category;
+GO
+
+-- Top states by revenue
+IF OBJECT_ID('demo.v_top_states','V') IS NOT NULL DROP VIEW demo.v_top_states;
+GO
+CREATE VIEW demo.v_top_states AS
+SELECT state, CAST(SUM(net_revenue) AS DECIMAL(12,2)) AS revenue
+FROM demo.orders_clean
+GROUP BY state;
+GO
