@@ -1,4 +1,4 @@
-[![Open in GitHub Codespaces](https://github.com/ramisamorshed/PRACTICE_PROJECT1_sql)
+[![Open in GitHub Codespaces](https://github.com/ramisamorshed/PRACTICE_PROJECT1_sql/blob/main/project1.sql)
 SQL Server project: messy e-commerce dataset cleaned and analyzed using T-SQL.
 
 # SQL Data Cleaning & Analysis Project
