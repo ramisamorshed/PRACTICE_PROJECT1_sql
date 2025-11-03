@@ -53,5 +53,4 @@ INSERT INTO demo.raw_orders VALUES
 ('1017', '2025-01-15', '515', 'CA',   'Home & Kitchen',     'Toaster',       '1',     '$24.50',   '0',       '8%',     'Completed'),
 ('1018', '2025-02-22', '516', 'wa ',  'Electronics',        'Mouse',         '1',     '$15',      '',        '7.5%',   'Completed');
 
--- Quick peek
 SELECT TOP 5 * FROM demo.raw_orders ORDER BY order_id;
